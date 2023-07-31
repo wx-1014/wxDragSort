@@ -1,0 +1,18 @@
+<!-- 常用菜单 -->
+<view class="main">
+  <view class="containers">
+    <movable-area class="item_box" style="width: {{boxWeight}}rpx;height: {{boxHeight}}rpx">
+      <movable-view class="item {{selectId === item.id?'item_show':'item_hide'}}" wx:for="{{healthItem}}" x="{{item.x}}rpx" y="{{item.y}}rpx" direction="all" bindchange="touchMove" bindtouchend="touchend" data-index="{{item.index}}" data-id="{{item.id}}" bindtouchstart="unlockItem">
+        <image src="{{item.src}}" mode="widthFix" style="width: 88rpx;"></image>
+        <view class="item_name">{{item.name}}</view>
+      </movable-view>
+    </movable-area>
+
+    <view class="item_box layer_box" style="width: {{boxWeight}}rpx;height: {{boxHeight}}rpx;">
+      <view class="item layer_item {{selectId == item.id?'item_hide':null}}" wx:for="{{layerItem}}" style="left: {{item.x}}rpx;top: {{item.y}}rpx">
+        <image src="{{item.src}}" mode="widthFix" style="width: 88rpx;"></image>
+        <view class="item_name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

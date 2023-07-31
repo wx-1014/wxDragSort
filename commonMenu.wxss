@@ -1,0 +1,45 @@
+page {
+  background-color: #FFFFFF;
+}
+
+.containers {
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.item_box {
+  z-index: 9;
+}
+
+.item {
+  width: 150rpx;
+  height: 150rpx;
+  text-align: center;
+}
+
+.item_name {
+  font-size: 24rpx;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.layer_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.layer_item {
+  position: absolute;
+  transition: left .5s, top .5s;
+  text-align: center;
+}
+
+.item_show {
+  opacity: 1;
+}
+
+.item_hide {
+  opacity: 0;
+}
